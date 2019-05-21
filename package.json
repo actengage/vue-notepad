@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name VueNotepad ./src/index.js",
     "lint": "vue-cli-service lint",
     "release-patch": "npm version patch; npm run release;",
     "release-minor": "npm version minor; npm run release;",

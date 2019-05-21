@@ -3,7 +3,10 @@ var ManifestPlugin = require('webpack-manifest-plugin');
 // vue.config.js
 module.exports = {
     configureWebpack: {
-        plugins:[
+        output: {
+            libraryExport: 'default'
+        },
+        plugins: [
             // new ManifestPlugin()
         ],
     },
