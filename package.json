@@ -1,6 +1,6 @@
 {
   "name": "vue-notepad",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name VueNotepad ./src/index.js",
