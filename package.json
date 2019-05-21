@@ -1,0 +1,38 @@
+{
+  "name": "vue-notepad",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "release-patch": "npm version patch; npm run release;",
+    "release-minor": "npm version minor; npm run release;",
+    "release-major": "npm version major; npm run release;",
+    "release": "npm run build; npm run commit; npm publish; git push --follow-tags;"
+  },
+  "dependencies": {
+    "vue-interface": "^0.4.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "babel-eslint": "^10.0.1",
+    "bootstrap": "^4.3.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "html-beautify-webpack-plugin": "^1.0.5",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-manifest-plugin": "^2.0.4"
+  }
+}
