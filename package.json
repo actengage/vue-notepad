@@ -11,7 +11,7 @@
     "release": "npm run build; npm run commit; npm publish; git push --follow-tags;"
   },
   "dependencies": {
-    "vue-interface": "^0.4.1"
+    "vue-interface": "^0.4.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
