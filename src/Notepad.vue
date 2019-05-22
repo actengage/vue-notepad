@@ -113,20 +113,7 @@ $notepad-line-padding-left: calc(#{$notepad-gutter-size} + #{$notepad-line-heigh
     &.editable .notepad-lines {
         padding-bottom: $notepad-line-height;
     }
-/*
-    .notepad-lines {
-        // padding-right: $notepad-line-padding-right;
-        // padding-left: $notepad-line-padding-left;
-
-        margin-top: -$notepad-line-height;
-        padding-bottom: $notepad-line-height;
-        background-image: repeating-linear-gradient(
-            white 0px,
-            white calc(2rem - 1px),
-            steelblue $notepad-line-height
-        );
-    }
-*/
+    
     textarea.notepad-header,
     textarea.notepad-body,
     textarea.notepad-footer {
@@ -148,6 +135,7 @@ $notepad-line-padding-left: calc(#{$notepad-gutter-size} + #{$notepad-line-heigh
     textarea.notepad-body,
     textarea.notepad-footer {
         padding-left: $notepad-line-padding-left;
+        padding-right: $notepad-line-padding-right;
     }
 
     .notepad-header, textarea.notepad-header {
