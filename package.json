@@ -1,6 +1,6 @@
 {
   "name": "vue-notepad",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "module": "./src/index.js",
   "main": "./dist/VueNotepad.umd.min.js",
   "scripts": {
