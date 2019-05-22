@@ -86,12 +86,16 @@ export default {
 <style lang="scss">
 $notepad-font-size: 1rem;
 $notepad-line-height: 2rem;
+
+$notepad-gutter-size: $notepad-line-height * 2;
+
 $notepad-header-font-size: 1.5rem;
 $notepad-header-line-height: $notepad-header-font-size * 1.25;
+
 $notepad-footer-font-size: .85rem;
 $notepad-footer-line-height: $notepad-footer-font-size * 1.25;
-$notepad-gutter-size: $notepad-line-height * 2;
-$notepad-line-padding-right: $notepad-gutter-size / 2;
+
+$notepad-line-padding-right: calc(#{$notepad-gutter-size / 2} + #{$notepad-line-height / 2});
 $notepad-line-padding-left: calc(#{$notepad-gutter-size} + #{$notepad-line-height / 2});
 
 .notepad {
