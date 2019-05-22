@@ -131,17 +131,7 @@ $notepad-line-padding-left: calc(#{$notepad-gutter-size} + #{$notepad-line-heigh
         background: none;
         overflow: hidden;
     }
-
-    .notepad-header,
-    .notepad-body,
-    .notepad-footer,
-    textarea.notepad-header,
-    textarea.notepad-body,
-    textarea.notepad-footer {
-        padding-left: $notepad-line-padding-left;
-        padding-right: $notepad-line-padding-right;
-    }
-
+    
     .notepad-header, textarea.notepad-header {
         z-index: 2;
         position: relative;
@@ -177,6 +167,8 @@ $notepad-line-padding-left: calc(#{$notepad-gutter-size} + #{$notepad-line-heigh
         font-family: Courier, monospace;
         margin-top: $notepad-line-height;
         line-height: $notepad-line-height;
+        padding-left: $notepad-line-padding-left;
+        padding-right: $notepad-line-padding-right;
         // padding-bottom: $notepad-line-height;
 
         * {
