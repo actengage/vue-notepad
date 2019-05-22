@@ -156,6 +156,7 @@ $notepad-line-padding-left: calc(#{$notepad-gutter-size} + #{$notepad-line-heigh
         text-align: center;
         min-height: $notepad-line-height;
         margin-top: $notepad-header-line-height / 2;
+        margin-bottom: $notepad-header-line-height / 2;
         font-size: $notepad-header-font-size;
         line-height: $notepad-header-line-height;
     }
