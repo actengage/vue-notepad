@@ -132,14 +132,18 @@ $notepad-line-padding-left: calc(#{$notepad-gutter-size} + #{$notepad-line-heigh
         overflow: hidden;
     }
 
-    .notepad-header,
     .notepad-body,
-    .notepad-footer,
-    textarea.notepad-header,
-    textarea.notepad-body,
-    textarea.notepad-footer {
+    textarea.notepad-body, {
         padding-left: $notepad-line-padding-left;
         padding-right: $notepad-line-padding-right;
+    }
+
+    .notepad-header,
+    .notepad-footer,
+    textarea.notepad-header,
+    textarea.notepad-footer {
+        padding-left: $notepad-line-padding-left;
+        padding-right: $notepad-line-padding-left;
     }
 
     .notepad-header, textarea.notepad-header {
