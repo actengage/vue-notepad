@@ -101,8 +101,8 @@ $notepad-line-padding-left: calc(#{$notepad-gutter-size} + #{$notepad-line-heigh
 .notepad {
     display: flex;
     position: relative;
+    background: white;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 0px 5px 0px #888;
 
     &::before {
