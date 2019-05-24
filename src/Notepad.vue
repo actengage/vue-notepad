@@ -3,7 +3,7 @@
         <component
             v-component-model="form.header"
             v-autogrow="header && editable"
-            :is="is(header)"
+            :is="this.component(header)"
             ref="header"
             class="notepad-header">
             <slot name="header" />
@@ -13,7 +13,7 @@
             <component
                 v-component-model="form.body"
                 v-autogrow="body && editable"
-                :is="is(body)"
+                :is="this.component(body)"
                 ref="body"
                 class="notepad-body">
                 <slot/>
@@ -23,7 +23,7 @@
         <component
             v-component-model="form.footer"
             v-autogrow="footer && editable"
-            :is="is(footer)"
+            :is="this.component(footer)"
             ref="footer"
             class="notepad-footer">
             <slot name="footer" />
@@ -94,7 +94,7 @@ export default {
 
     methods: {
         
-        is(value) {
+        component(value) {
             return value && this.editable ? 'textarea' : 'div';
         },
         
