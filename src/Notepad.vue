@@ -1,12 +1,33 @@
 <template>
     <div class="notepad" :class="{ editable }"  @click="onClickContainer">
-        <component v-component-model="form.header" v-autogrow="editable" ref="header" :is="is" class="notepad-header"><slot name="header" /></component>
+        <component
+            v-component-model="form.header"
+            v-autogrow="header && editable"
+            :is="is(header)"
+            ref="header"
+            class="notepad-header">
+            <slot name="header" />
+        </component>
 
         <div class="notepad-lines">
-            <component v-component-model="form.body" v-autogrow="editable" ref="body" :is="is" class="notepad-body"><slot/></component>
+            <component
+                v-component-model="form.body"
+                v-autogrow="body && editable"
+                :is="is(body)"
+                ref="body"
+                class="notepad-body">
+                <slot/>
+            </component>
         </div>
         
-        <component v-component-model="form.footer" v-autogrow="editable" ref="footer" :is="is" class="notepad-footer"><slot name="footer" /></component>
+        <component
+            v-component-model="form.footer"
+            v-autogrow="footer && editable"
+            :is="is(footer)"
+            ref="footer"
+            class="notepad-footer">
+            <slot name="footer" />
+        </component>
     </div>
 </template>
 
@@ -16,7 +37,24 @@ import Autogrow from 'vue-interface/src/Directives/Autogrow';
 export default {
 
     props: {
-        editable: Boolean
+        
+        editable: Boolean,
+
+        header: {
+            type: Boolean, 
+            default: true
+        },
+
+        body: {
+            type: Boolean, 
+            default: true
+        },
+
+        footer: {
+            type: Boolean, 
+            default: true
+        }
+
     },
 
     directives: {
@@ -54,13 +92,11 @@ export default {
 
     },
 
-    computed: {
-        is() {
-            return this.editable ? 'textarea' : 'div';
-        }
-    },
-
     methods: {
+        
+        is(value) {
+            return value && this.editable ? 'textarea' : 'div';
+        },
         
         onClickContainer() {
             if(this.$refs.body && this.editable) {

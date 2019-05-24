@@ -180,12 +180,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"77fc4d0d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Notepad.vue?vue&type=template&id=6366a3d2&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"notepad",class:{ editable: _vm.editable },on:{"click":_vm.onClickContainer}},[_c(_vm.is,{directives:[{name:"component-model",rawName:"v-component-model",value:(_vm.form.header),expression:"form.header"},{name:"autogrow",rawName:"v-autogrow",value:(_vm.editable),expression:"editable"}],ref:"header",tag:"component",staticClass:"notepad-header"},[_vm._t("header")],2),_c('div',{staticClass:"notepad-lines"},[_c(_vm.is,{directives:[{name:"component-model",rawName:"v-component-model",value:(_vm.form.body),expression:"form.body"},{name:"autogrow",rawName:"v-autogrow",value:(_vm.editable),expression:"editable"}],ref:"body",tag:"component",staticClass:"notepad-body"},[_vm._t("default")],2)],1),_c(_vm.is,{directives:[{name:"component-model",rawName:"v-component-model",value:(_vm.form.footer),expression:"form.footer"},{name:"autogrow",rawName:"v-autogrow",value:(_vm.editable),expression:"editable"}],ref:"footer",tag:"component",staticClass:"notepad-footer"},[_vm._t("footer")],2)],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"04436aec-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Notepad.vue?vue&type=template&id=1347d674&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"notepad",class:{ editable: _vm.editable },on:{"click":_vm.onClickContainer}},[_c(_vm.is(_vm.header),{directives:[{name:"component-model",rawName:"v-component-model",value:(_vm.form.header),expression:"form.header"},{name:"autogrow",rawName:"v-autogrow",value:(_vm.header && _vm.editable),expression:"header && editable"}],ref:"header",tag:"component",staticClass:"notepad-header"},[_vm._t("header")],2),_c('div',{staticClass:"notepad-lines"},[_c(_vm.is(_vm.body),{directives:[{name:"component-model",rawName:"v-component-model",value:(_vm.form.body),expression:"form.body"},{name:"autogrow",rawName:"v-autogrow",value:(_vm.body && _vm.editable),expression:"body && editable"}],ref:"body",tag:"component",staticClass:"notepad-body"},[_vm._t("default")],2)],1),_c(_vm.is(_vm.footer),{directives:[{name:"component-model",rawName:"v-component-model",value:(_vm.form.footer),expression:"form.footer"},{name:"autogrow",rawName:"v-autogrow",value:(_vm.footer && _vm.editable),expression:"footer && editable"}],ref:"footer",tag:"component",staticClass:"notepad-footer"},[_vm._t("footer")],2)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/Notepad.vue?vue&type=template&id=6366a3d2&
+// CONCATENATED MODULE: ./src/Notepad.vue?vue&type=template&id=1347d674&
 
 // CONCATENATED MODULE: ./node_modules/vue-interface/src/Directives/Autogrow/Autogrow.js
 const STYLE_ATTRIBUTES = [
@@ -345,10 +345,43 @@ function init(el, binding, vnode) {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ var Notepadvue_type_script_lang_js_ = ({
   props: {
-    editable: Boolean
+    editable: Boolean,
+    header: {
+      type: Boolean,
+      default: true
+    },
+    body: {
+      type: Boolean,
+      default: true
+    },
+    footer: {
+      type: Boolean,
+      default: true
+    }
   },
   directives: {
     Autogrow: Directives_Autogrow,
@@ -380,13 +413,11 @@ function init(el, binding, vnode) {
 
     }
   },
-  computed: {
-    is() {
-      return this.editable ? 'textarea' : 'div';
-    }
-
-  },
   methods: {
+    is(value) {
+      return value && this.editable ? 'textarea' : 'div';
+    },
+
     onClickContainer() {
       if (this.$refs.body && this.editable) {// this.$refs.body.focus();
       }
